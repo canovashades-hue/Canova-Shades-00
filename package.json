@@ -1,0 +1,12 @@
+{
+  "name": "canova-shades",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "serve . -l 3000 --single",
+    "start": "serve . -l 3000 --single"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
