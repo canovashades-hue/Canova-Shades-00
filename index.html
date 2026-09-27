@@ -73,6 +73,11 @@ body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);backgrou
 .stat-label{font-size:11px;letter-spacing:.12em;color:var(--ink-soft);}
 .section{padding:88px 0;}
 .section-soft{background:var(--bg-soft);}
+.service-guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;}
+.service-guide{display:block;padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff;color:inherit;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease;}
+.service-guide:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(15,58,95,.2);}
+.service-guide h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;line-height:1.25;margin:0 0 9px;color:var(--ink);}
+.service-guide p{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
 .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:24px;flex-wrap:wrap;}
 .h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);line-height:1.15;margin:0;max-width:640px;}
 .h2 em{color:var(--blue-600);font-style:italic;}
@@ -167,7 +172,7 @@ body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);backgrou
 .stats-grid{grid-template-columns:repeat(2,1fr);}
 .stat{border-bottom:1px solid var(--line);}
 .stat:nth-child(2n){border-right:none;}
-.cap-grid,.audience-grid,.proj-grid,.why-grid{grid-template-columns:1fr;}
+ .cap-grid,.audience-grid,.proj-grid,.why-grid,.service-guides-grid{grid-template-columns:1fr;}
 .two-col,.svc-row,.contact-grid{grid-template-columns:1fr;}
 .svc-row.reverse .svc-media{order:0;}
 .footer-grid{grid-template-columns:1fr;}
@@ -855,6 +860,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 </div>
+<section class="section section-soft" aria-labelledby="service-guides-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">SERVICE GUIDES</p>
+        <h2 class="h2" id="service-guides-title">Explore our <em>shade structure services.</em></h2>
+      </div>
+      <p style="max-width:360px;color:var(--ink-soft);font-size:14px;line-height:1.6;margin:0;">Learn about the structures CanovaShades designs, fabricates and installs in Mumbai and across India.</p>
+    </div>
+    <div class="service-guides-grid">
+      <a class="service-guide" href="tensile-structure-manufacturer-mumbai.html">
+        <h3>Tensile Structure Manufacturer in Mumbai</h3>
+        <p>Engineered tensile membrane structures, canopies and large-span shade roofs.</p>
+      </a>
+      <a class="service-guide" href="awning-manufacturer-mumbai.html">
+        <h3>Awning Manufacturer in Mumbai</h3>
+        <p>Fixed, retractable and motorised awnings with monsoon-ready outdoor shading.</p>
+      </a>
+      <a class="service-guide" href="car-parking-tensile-shades-mumbai.html">
+        <h3>Car Parking Tensile Shades in Mumbai</h3>
+        <p>Site-led parking shade structures with engineered steelwork and membrane roofing.</p>
+      </a>
+    </div>
+  </div>
+</section>
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
