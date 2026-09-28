@@ -939,6 +939,17 @@ var PAGE_TITLES = {
   'thankyou':'Thank You \u2014 CanovaShades'
 };
 function goTo(page, skipHistory){
+  var cleanRoutes = {
+    home: '/',
+    who: '/who-we-are.html',
+    services: '/services.html',
+    projects: '/projects.html',
+    contact: '/contact.html'
+  };
+  if(cleanRoutes[page] && !skipHistory){
+    window.location.href = cleanRoutes[page];
+    return;
+  }
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+page).classList.add('active');
   const navMatch = page.indexOf('svc-')===0 ? 'services' : page;
@@ -953,11 +964,9 @@ function goTo(page, skipHistory){
   csPush({ event:'virtual_pageview', page_id:page, page_title: PAGE_TITLES[page] || document.title, page_path: '/#'+page });
 }
 function enquireFor(service){
-  goTo('contact');
-  var serviceField = document.getElementById('f-service');
-  if(serviceField && service) serviceField.value = service;
-  var nameField = document.getElementById('f-name');
-  if(nameField) setTimeout(function(){ nameField.focus(); }, 0);
+  var target = '/contact.html';
+  if(service) target += '?service=' + encodeURIComponent(service);
+  window.location.href = target;
 }
 window.addEventListener('popstate', function(e){
   const page = (e.state && e.state.page) || (location.hash ? location.hash.slice(1) : 'home');
